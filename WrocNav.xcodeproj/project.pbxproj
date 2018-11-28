@@ -16,6 +16,7 @@
 		E240CBFD21A5A56D00A136BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBF921A5A56D00A136BF /* RxSwift.framework */; };
 		E240CBFE21A5A56D00A136BF /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */; };
 		E240CBFF21A5A56D00A136BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBFB21A5A56D00A136BF /* Alamofire.framework */; };
+		E2F4FCA221AE1E94005B34F1 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F4FCA121AE1E94005B34F1 /* SideMenu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E240CBF921A5A56D00A136BF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E240CBFB21A5A56D00A136BF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E2F4FCA121AE1E94005B34F1 /* SideMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SideMenu.framework; path = Carthage/Build/iOS/SideMenu.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F4FCA221AE1E94005B34F1 /* SideMenu.framework in Frameworks */,
 				E240CBFC21A5A56D00A136BF /* Mapbox.framework in Frameworks */,
 				E240CBFD21A5A56D00A136BF /* RxSwift.framework in Frameworks */,
 				E240CBFE21A5A56D00A136BF /* SwiftyBeaver.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		E240CBE421A59C1F00A136BF /* WrocNav */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FCA321AE23A5005B34F1 /* Model */,
 				E240CBE521A59C1F00A136BF /* AppDelegate.swift */,
 				E240CBE721A59C1F00A136BF /* ViewController.swift */,
 				E240CBE921A59C1F00A136BF /* Main.storyboard */,
@@ -80,12 +84,20 @@
 		E240CBF721A5A56D00A136BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FCA121AE1E94005B34F1 /* SideMenu.framework */,
 				E240CBFB21A5A56D00A136BF /* Alamofire.framework */,
 				E240CBF821A5A56D00A136BF /* Mapbox.framework */,
 				E240CBF921A5A56D00A136BF /* RxSwift.framework */,
 				E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2F4FCA321AE23A5005B34F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +180,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SideMenu.framework",
 			);
 			outputFileListPaths = (
 			);
