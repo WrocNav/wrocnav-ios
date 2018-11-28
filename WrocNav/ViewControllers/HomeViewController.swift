@@ -7,21 +7,27 @@
 //
 
 import UIKit
-import SideMenu
+import Mapbox
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: WNViewController {
+    @IBOutlet weak var mapView: MGLMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setUpNavigationBar()
+        
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.74699, longitude: -73.98742), animated: false)
+        mapView.styleURL = MGLStyle.lightStyleURL
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indentifier = segue.identifier else {
+    
+    func setUpNavigationBar() {
+        guard let navBar = self.navigationController?.navigationBar else {
             return
         }
         
-
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.tintColor = UIColor.black
+        navBar.shadowImage = UIImage()
     }
 
 }

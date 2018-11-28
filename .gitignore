@@ -63,5 +63,8 @@ playground.xcworkspace
 ## Carthage
 Carthage/
 
+## Mapbox
+.mapbox
+
 ## GoogleService
 GoogleService-Info.plist

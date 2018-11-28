@@ -163,6 +163,7 @@
 				E240CBDF21A59C1F00A136BF /* Frameworks */,
 				E240CBE021A59C1F00A136BF /* Resources */,
 				E240CC0021A5A59500A136BF /* ShellScript */,
+				E2F4FCE121AEFF6E005B34F1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -242,6 +243,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		E2F4FCE121AEFF6E005B34F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+				"$(SRCROOT)/.mapbox",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "token_file=$SRCROOT/.mapbox\necho \"info: $(cat $token_file)\"\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n    plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n    echo 'warning: Missing Mapbox access token'\n    echo \"warning: Get an access token from <https://www.mapbox.com/account/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

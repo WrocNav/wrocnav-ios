@@ -19,9 +19,13 @@ class MainNavigationController: UINavigationController, MenuTableViewControllerD
     }()
     
     private let menuItems: [MenuItem] = [
-        MenuItem(viewControllerId: "mapVC", title: "Map", iconName: nil),
+        MenuItem(viewControllerId: "homeVC", title: "Map", iconName: nil),
         MenuItem(viewControllerId: "scheduleVC", title: "Schedule", iconName: nil)
     ]
+    
+    private var initialMenuItem: MenuItem {
+        return menuItems[0]
+    }
     
     private var viewControllerDict: [String: UIViewController] = [:]
     
@@ -30,6 +34,7 @@ class MainNavigationController: UINavigationController, MenuTableViewControllerD
         menuController.menuItems = menuItems
         menuController.delegate = self
         setUpSideMenu()
+        setUpInitialController()
     }
     
     private func setUpSideMenu() {
@@ -40,6 +45,11 @@ class MainNavigationController: UINavigationController, MenuTableViewControllerD
         manager.menuAnimationTransformScaleFactor = 1.0
         manager.menuPresentMode = .menuSlideIn
         manager.menuFadeStatusBar = false
+    }
+    
+    func setUpInitialController() {
+        let vc = getViewController(id: initialMenuItem.viewControllerId)
+        self.setViewControllers([vc], animated: false)
     }
     
     private func getViewController(id: String) -> UIViewController {
@@ -53,8 +63,13 @@ class MainNavigationController: UINavigationController, MenuTableViewControllerD
     private func instantiateViewController(id: String) -> UIViewController {
         var vc: UIViewController!
         switch id {
+        case "homeVC":
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: id)
         default:
+            log.warning("No such view controller with id: \(id), creating empty WNViewController")
             vc = WNViewController()
+            vc.view.backgroundColor = UIColor.white
         }
         
         return vc
@@ -63,7 +78,9 @@ class MainNavigationController: UINavigationController, MenuTableViewControllerD
     // MARK: MenuTableViewControllerDelegate
     
     func menu(_ menuVC: MenuTableViewController, didSelectItem item: MenuItem) {
-        log.debug("Did select item with title: \(item.title)")
+        let vc = getViewController(id: item.viewControllerId)
+        self.setViewControllers([vc], animated: false)
+        self.dismiss(animated: true, completion: nil)
     }
  
 }
