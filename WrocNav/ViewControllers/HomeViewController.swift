@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import SideMenu
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indentifier = segue.identifier else {
+            return
+        }
+        
+
+    }
 
 }
-

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240CBE521A59C1F00A136BF /* AppDelegate.swift */; };
-		E240CBE821A59C1F00A136BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240CBE721A59C1F00A136BF /* ViewController.swift */; };
+		E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240CBE721A59C1F00A136BF /* HomeViewController.swift */; };
 		E240CBEB21A59C1F00A136BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E240CBE921A59C1F00A136BF /* Main.storyboard */; };
 		E240CBED21A59C2100A136BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E240CBEC21A59C2100A136BF /* Assets.xcassets */; };
 		E240CBF021A59C2100A136BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E240CBEE21A59C2100A136BF /* LaunchScreen.storyboard */; };
@@ -17,12 +17,18 @@
 		E240CBFE21A5A56D00A136BF /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */; };
 		E240CBFF21A5A56D00A136BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBFB21A5A56D00A136BF /* Alamofire.framework */; };
 		E2F4FCA221AE1E94005B34F1 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F4FCA121AE1E94005B34F1 /* SideMenu.framework */; };
+		E2F4FCA521AE248B005B34F1 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCA421AE248B005B34F1 /* Station.swift */; };
+		E2F4FCD021AEDCD5005B34F1 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCCF21AEDCD5005B34F1 /* MainNavigationController.swift */; };
+		E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCD121AEE2DB005B34F1 /* WNViewController.swift */; };
+		E2F4FCD421AEEA4E005B34F1 /* KMNavigationBarTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F4FCD321AEEA4E005B34F1 /* KMNavigationBarTransition.framework */; };
+		E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCD521AEEE88005B34F1 /* MenuTableViewController.swift */; };
+		E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCD821AEF5C4005B34F1 /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E240CBE221A59C1F00A136BF /* WrocNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrocNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E240CBE521A59C1F00A136BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E240CBE721A59C1F00A136BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E240CBE721A59C1F00A136BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E240CBEA21A59C1F00A136BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E240CBEC21A59C2100A136BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E240CBEF21A59C2100A136BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +38,12 @@
 		E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E240CBFB21A5A56D00A136BF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E2F4FCA121AE1E94005B34F1 /* SideMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SideMenu.framework; path = Carthage/Build/iOS/SideMenu.framework; sourceTree = "<group>"; };
+		E2F4FCA421AE248B005B34F1 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		E2F4FCCF21AEDCD5005B34F1 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		E2F4FCD121AEE2DB005B34F1 /* WNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNViewController.swift; sourceTree = "<group>"; };
+		E2F4FCD321AEEA4E005B34F1 /* KMNavigationBarTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KMNavigationBarTransition.framework; path = Carthage/Build/iOS/KMNavigationBarTransition.framework; sourceTree = "<group>"; };
+		E2F4FCD521AEEE88005B34F1 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		E2F4FCD821AEF5C4005B34F1 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F4FCD421AEEA4E005B34F1 /* KMNavigationBarTransition.framework in Frameworks */,
 				E2F4FCA221AE1E94005B34F1 /* SideMenu.framework in Frameworks */,
 				E240CBFC21A5A56D00A136BF /* Mapbox.framework in Frameworks */,
 				E240CBFD21A5A56D00A136BF /* RxSwift.framework in Frameworks */,
@@ -70,9 +83,9 @@
 		E240CBE421A59C1F00A136BF /* WrocNav */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FCA621AECF8D005B34F1 /* ViewControllers */,
 				E2F4FCA321AE23A5005B34F1 /* Model */,
 				E240CBE521A59C1F00A136BF /* AppDelegate.swift */,
-				E240CBE721A59C1F00A136BF /* ViewController.swift */,
 				E240CBE921A59C1F00A136BF /* Main.storyboard */,
 				E240CBEC21A59C2100A136BF /* Assets.xcassets */,
 				E240CBEE21A59C2100A136BF /* LaunchScreen.storyboard */,
@@ -84,6 +97,7 @@
 		E240CBF721A5A56D00A136BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FCD321AEEA4E005B34F1 /* KMNavigationBarTransition.framework */,
 				E2F4FCA121AE1E94005B34F1 /* SideMenu.framework */,
 				E240CBFB21A5A56D00A136BF /* Alamofire.framework */,
 				E240CBF821A5A56D00A136BF /* Mapbox.framework */,
@@ -96,8 +110,29 @@
 		E2F4FCA321AE23A5005B34F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FCA421AE248B005B34F1 /* Station.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E2F4FCA621AECF8D005B34F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4FCD721AEF5B8005B34F1 /* SideMenu */,
+				E240CBE721A59C1F00A136BF /* HomeViewController.swift */,
+				E2F4FCCF21AEDCD5005B34F1 /* MainNavigationController.swift */,
+				E2F4FCD121AEE2DB005B34F1 /* WNViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2F4FCD721AEF5B8005B34F1 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4FCD521AEEE88005B34F1 /* MenuTableViewController.swift */,
+				E2F4FCD821AEF5C4005B34F1 /* MenuItem.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +216,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SideMenu.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KMNavigationBarTransition.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -197,7 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E240CBE821A59C1F00A136BF /* ViewController.swift in Sources */,
+				E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */,
+				E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */,
+				E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */,
+				E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */,
+				E2F4FCA521AE248B005B34F1 /* Station.swift in Sources */,
+				E2F4FCD021AEDCD5005B34F1 /* MainNavigationController.swift in Sources */,
 				E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

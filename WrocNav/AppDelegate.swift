@@ -7,6 +7,22 @@
 //
 
 import UIKit
+import SwiftyBeaver
+
+let log: SwiftyBeaver.Type = {
+    let log = SwiftyBeaver.self
+    let console = ConsoleDestination()
+    console.format = "$DHH:mm:ss$d $L $F $M"
+    console.levelString.verbose = "💜 VERBOSE"
+    console.levelString.debug = "💚 DEBUG"
+    console.levelString.info = "💙 INFO"
+    console.levelString.warning = "💛 WARNING"
+    console.levelString.error = "❤️ ERROR"
+    log.addDestination(console)
+    log.debug("Logger is ready to be used.")
+    
+    return log
+}()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // intialize logger
+        _ = log
         return true
     }
 
