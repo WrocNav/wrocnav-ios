@@ -23,6 +23,9 @@
 		E2F4FCD421AEEA4E005B34F1 /* KMNavigationBarTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F4FCD321AEEA4E005B34F1 /* KMNavigationBarTransition.framework */; };
 		E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCD521AEEE88005B34F1 /* MenuTableViewController.swift */; };
 		E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCD821AEF5C4005B34F1 /* MenuItem.swift */; };
+		E2F4FCDB21AEF81B005B34F1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCDA21AEF81B005B34F1 /* Theme.swift */; };
+		E2F4FCDF21AEF8B3005B34F1 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCDD21AEF8B3005B34F1 /* UIKit+Extensions.swift */; };
+		E2F4FCE021AEF8B3005B34F1 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCDE21AEF8B3005B34F1 /* Foundation+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		E2F4FCD321AEEA4E005B34F1 /* KMNavigationBarTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KMNavigationBarTransition.framework; path = Carthage/Build/iOS/KMNavigationBarTransition.framework; sourceTree = "<group>"; };
 		E2F4FCD521AEEE88005B34F1 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		E2F4FCD821AEF5C4005B34F1 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		E2F4FCDA21AEF81B005B34F1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E2F4FCDD21AEF8B3005B34F1 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		E2F4FCDE21AEF8B3005B34F1 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,11 @@
 		E240CBE421A59C1F00A136BF /* WrocNav */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FCDC21AEF861005B34F1 /* Extensions */,
 				E2F4FCA621AECF8D005B34F1 /* ViewControllers */,
 				E2F4FCA321AE23A5005B34F1 /* Model */,
 				E240CBE521A59C1F00A136BF /* AppDelegate.swift */,
+				E2F4FCDA21AEF81B005B34F1 /* Theme.swift */,
 				E240CBE921A59C1F00A136BF /* Main.storyboard */,
 				E240CBEC21A59C2100A136BF /* Assets.xcassets */,
 				E240CBEE21A59C2100A136BF /* LaunchScreen.storyboard */,
@@ -133,6 +141,15 @@
 				E2F4FCD821AEF5C4005B34F1 /* MenuItem.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		E2F4FCDC21AEF861005B34F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4FCDE21AEF8B3005B34F1 /* Foundation+Extensions.swift */,
+				E2F4FCDD21AEF8B3005B34F1 /* UIKit+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +251,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */,
+				E2F4FCDB21AEF81B005B34F1 /* Theme.swift in Sources */,
 				E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */,
 				E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */,
 				E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */,
+				E2F4FCDF21AEF8B3005B34F1 /* UIKit+Extensions.swift in Sources */,
 				E2F4FCA521AE248B005B34F1 /* Station.swift in Sources */,
 				E2F4FCD021AEDCD5005B34F1 /* MainNavigationController.swift in Sources */,
+				E2F4FCE021AEF8B3005B34F1 /* Foundation+Extensions.swift in Sources */,
 				E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
