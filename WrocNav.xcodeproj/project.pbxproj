@@ -29,6 +29,11 @@
 		E2F4FD2221B828DE005B34F1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2121B828DE005B34F1 /* ConnectionManager.swift */; };
 		E2F4FD2821B85AB4005B34F1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2721B85AB4005B34F1 /* DataService.swift */; };
 		E2F4FD2A21B85B69005B34F1 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2921B85B69005B34F1 /* TimeTable.swift */; };
+		E2F4FD3121B8744B005B34F1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2C21B8744B005B34F1 /* RoundButton.swift */; };
+		E2F4FD3221B8744B005B34F1 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2D21B8744B005B34F1 /* RoundView.swift */; };
+		E2F4FD3321B8744B005B34F1 /* GradientRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2E21B8744B005B34F1 /* GradientRoundView.swift */; };
+		E2F4FD3421B8744B005B34F1 /* GradientRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2F21B8744B005B34F1 /* GradientRoundButton.swift */; };
+		E2F4FD3521B8744B005B34F1 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD3021B8744B005B34F1 /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		E2F4FD2121B828DE005B34F1 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		E2F4FD2721B85AB4005B34F1 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E2F4FD2921B85B69005B34F1 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
+		E2F4FD2C21B8744B005B34F1 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		E2F4FD2D21B8744B005B34F1 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		E2F4FD2E21B8744B005B34F1 /* GradientRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientRoundView.swift; sourceTree = "<group>"; };
+		E2F4FD2F21B8744B005B34F1 /* GradientRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientRoundButton.swift; sourceTree = "<group>"; };
+		E2F4FD3021B8744B005B34F1 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		E240CBE421A59C1F00A136BF /* WrocNav */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FD2B21B87420005B34F1 /* Views */,
 				E2F4FD2021B828B2005B34F1 /* Services */,
 				E2F4FCDC21AEF861005B34F1 /* Extensions */,
 				E2F4FCA621AECF8D005B34F1 /* ViewControllers */,
@@ -175,6 +186,18 @@
 			children = (
 			);
 			path = Routes;
+			sourceTree = "<group>";
+		};
+		E2F4FD2B21B87420005B34F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4FD2F21B8744B005B34F1 /* GradientRoundButton.swift */,
+				E2F4FD2E21B8744B005B34F1 /* GradientRoundView.swift */,
+				E2F4FD2C21B8744B005B34F1 /* RoundButton.swift */,
+				E2F4FD3021B8744B005B34F1 /* RoundImageView.swift */,
+				E2F4FD2D21B8744B005B34F1 /* RoundView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,17 +320,22 @@
 			files = (
 				E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */,
 				E2F4FCDB21AEF81B005B34F1 /* Theme.swift in Sources */,
+				E2F4FD3121B8744B005B34F1 /* RoundButton.swift in Sources */,
+				E2F4FD3321B8744B005B34F1 /* GradientRoundView.swift in Sources */,
 				E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */,
+				E2F4FD3221B8744B005B34F1 /* RoundView.swift in Sources */,
 				E2F4FD2221B828DE005B34F1 /* ConnectionManager.swift in Sources */,
 				E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */,
 				E2F4FD2821B85AB4005B34F1 /* DataService.swift in Sources */,
 				E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */,
 				E2F4FCDF21AEF8B3005B34F1 /* UIKit+Extensions.swift in Sources */,
+				E2F4FD3421B8744B005B34F1 /* GradientRoundButton.swift in Sources */,
 				E2F4FCA521AE248B005B34F1 /* Station.swift in Sources */,
 				E2F4FD2A21B85B69005B34F1 /* TimeTable.swift in Sources */,
 				E2F4FCD021AEDCD5005B34F1 /* MainNavigationController.swift in Sources */,
 				E2F4FCE021AEF8B3005B34F1 /* Foundation+Extensions.swift in Sources */,
 				E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */,
+				E2F4FD3521B8744B005B34F1 /* RoundImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

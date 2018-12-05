@@ -14,6 +14,7 @@ import Mapbox
 class HomeViewController: WNViewController {
     @IBOutlet weak var mapView: MGLMapView!
     
+    private var searchController: UISearchController!
     private let locationManager: CLLocationManager = CLLocationManager()
     private let dataService: DataService = DataService.shared
     private let disposeBag: DisposeBag = DisposeBag()
@@ -43,7 +44,7 @@ class HomeViewController: WNViewController {
         navBar.tintColor = UIColor.black
         navBar.shadowImage = UIImage()
     }
-    
+
     // MARK: User Actions
     
     @objc func locate(sender: Any) {
