@@ -26,6 +26,9 @@
 		E2F4FCDB21AEF81B005B34F1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCDA21AEF81B005B34F1 /* Theme.swift */; };
 		E2F4FCDF21AEF8B3005B34F1 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCDD21AEF8B3005B34F1 /* UIKit+Extensions.swift */; };
 		E2F4FCE021AEF8B3005B34F1 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FCDE21AEF8B3005B34F1 /* Foundation+Extensions.swift */; };
+		E2F4FD2221B828DE005B34F1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2121B828DE005B34F1 /* ConnectionManager.swift */; };
+		E2F4FD2821B85AB4005B34F1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2721B85AB4005B34F1 /* DataService.swift */; };
+		E2F4FD2A21B85B69005B34F1 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD2921B85B69005B34F1 /* TimeTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		E2F4FCDA21AEF81B005B34F1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E2F4FCDD21AEF8B3005B34F1 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		E2F4FCDE21AEF8B3005B34F1 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		E2F4FD2121B828DE005B34F1 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		E2F4FD2721B85AB4005B34F1 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E2F4FD2921B85B69005B34F1 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 		E240CBE421A59C1F00A136BF /* WrocNav */ = {
 			isa = PBXGroup;
 			children = (
+				E2F4FD2021B828B2005B34F1 /* Services */,
 				E2F4FCDC21AEF861005B34F1 /* Extensions */,
 				E2F4FCA621AECF8D005B34F1 /* ViewControllers */,
 				E2F4FCA321AE23A5005B34F1 /* Model */,
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F4FCA421AE248B005B34F1 /* Station.swift */,
+				E2F4FD2921B85B69005B34F1 /* TimeTable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +158,23 @@
 				E2F4FCDD21AEF8B3005B34F1 /* UIKit+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2F4FD2021B828B2005B34F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4FD2321B82A68005B34F1 /* Routes */,
+				E2F4FD2121B828DE005B34F1 /* ConnectionManager.swift */,
+				E2F4FD2721B85AB4005B34F1 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E2F4FD2321B82A68005B34F1 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +298,13 @@
 				E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */,
 				E2F4FCDB21AEF81B005B34F1 /* Theme.swift in Sources */,
 				E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */,
+				E2F4FD2221B828DE005B34F1 /* ConnectionManager.swift in Sources */,
 				E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */,
+				E2F4FD2821B85AB4005B34F1 /* DataService.swift in Sources */,
 				E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */,
 				E2F4FCDF21AEF8B3005B34F1 /* UIKit+Extensions.swift in Sources */,
 				E2F4FCA521AE248B005B34F1 /* Station.swift in Sources */,
+				E2F4FD2A21B85B69005B34F1 /* TimeTable.swift in Sources */,
 				E2F4FCD021AEDCD5005B34F1 /* MainNavigationController.swift in Sources */,
 				E2F4FCE021AEF8B3005B34F1 /* Foundation+Extensions.swift in Sources */,
 				E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */,
@@ -356,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -411,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +460,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WrocNav/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +483,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WrocNav/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
