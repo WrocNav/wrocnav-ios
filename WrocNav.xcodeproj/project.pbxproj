@@ -113,6 +113,7 @@
 		E240CBE421A59C1F00A136BF /* WrocNav */ = {
 			isa = PBXGroup;
 			children = (
+				E27F3BA421C1AF3700C3AB94 /* Cells */,
 				E2F4FD2B21B87420005B34F1 /* Views */,
 				E2F4FD2021B828B2005B34F1 /* Services */,
 				E2F4FCDC21AEF861005B34F1 /* Extensions */,
@@ -139,6 +140,13 @@
 				E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E27F3BA421C1AF3700C3AB94 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E2F4FCA321AE23A5005B34F1 /* Model */ = {
