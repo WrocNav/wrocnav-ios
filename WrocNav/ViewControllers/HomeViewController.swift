@@ -23,6 +23,7 @@ class HomeViewController: WNViewController {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpSearchBox()
+        title = ""
         locationManager.delegate = self
         
         let defaultCoordinates = CLLocationCoordinate2D(latitude: 51.111983, longitude: 17.061557)

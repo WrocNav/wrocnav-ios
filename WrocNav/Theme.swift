@@ -14,3 +14,11 @@ struct Theme {
         UITabBar.appearance().tintColor = UIColor.black
     }
 }
+
+extension UIColor {
+    
+    static var wnLightGray: UIColor {
+        return UIColor.hexStringToUIColor(hex: "#f5f5f5")
+    }
+    
+}
