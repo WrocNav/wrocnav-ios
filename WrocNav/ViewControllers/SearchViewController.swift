@@ -12,26 +12,20 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
-
+    @IBOutlet weak var resultTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
-        
-        
+        setUpTableView()
         // Do any additional setup after loading the view.
     }
     
     // MARK: UI setup
     
-    func setUpNavigationBar() {
-        guard let navBar = self.navigationController?.navigationBar else {
-            return
-        }
-        
-        navBar.setBackgroundImage(nil, for: .default)
-        navBar.backgroundColor = UIColor.white
-        navBar.tintColor = UIColor.black
-        navBar.shadowImage = UIImage()
+    func setUpTableView() {
+        resultTableView.dataSource = self
+        resultTableView.delegate = self
+        resultTableView.tableFooterView = UIView()
     }
 
     @IBAction func swapEndpoints(_ sender: Any) {
@@ -48,4 +42,20 @@ class SearchViewController: UIViewController {
     }
     */
 
+}
+
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
 }

@@ -16,6 +16,7 @@
 		E240CBFD21A5A56D00A136BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBF921A5A56D00A136BF /* RxSwift.framework */; };
 		E240CBFE21A5A56D00A136BF /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */; };
 		E240CBFF21A5A56D00A136BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CBFB21A5A56D00A136BF /* Alamofire.framework */; };
+		E27F3BA121C0AFAB00C3AB94 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F3BA021C0AFAB00C3AB94 /* RoundTextField.swift */; };
 		E2A21FF521C094C600F95286 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A21FF421C094C600F95286 /* SearchViewController.swift */; };
 		E2A21FF721C097B600F95286 /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A21FF621C097B600F95286 /* SearchBox.swift */; };
 		E2A21FF921C097C300F95286 /* SearchBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A21FF821C097C300F95286 /* SearchBox.xib */; };
@@ -51,6 +52,7 @@
 		E240CBF921A5A56D00A136BF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E240CBFA21A5A56D00A136BF /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E240CBFB21A5A56D00A136BF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E27F3BA021C0AFAB00C3AB94 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		E2A21FF421C094C600F95286 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E2A21FF621C097B600F95286 /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		E2A21FF821C097C300F95286 /* SearchBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBox.xib; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				E2F4FD2C21B8744B005B34F1 /* RoundButton.swift */,
 				E2F4FD3021B8744B005B34F1 /* RoundImageView.swift */,
 				E2F4FD2D21B8744B005B34F1 /* RoundView.swift */,
+				E27F3BA021C0AFAB00C3AB94 /* RoundTextField.swift */,
 				E2A21FF621C097B600F95286 /* SearchBox.swift */,
 				E2A21FF821C097C300F95286 /* SearchBox.xib */,
 			);
@@ -338,6 +341,7 @@
 				E2F4FD3221B8744B005B34F1 /* RoundView.swift in Sources */,
 				E2F4FD2221B828DE005B34F1 /* ConnectionManager.swift in Sources */,
 				E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */,
+				E27F3BA121C0AFAB00C3AB94 /* RoundTextField.swift in Sources */,
 				E2F4FD2821B85AB4005B34F1 /* DataService.swift in Sources */,
 				E2F4FCD621AEEE88005B34F1 /* MenuTableViewController.swift in Sources */,
 				E2F4FCDF21AEF8B3005B34F1 /* UIKit+Extensions.swift in Sources */,

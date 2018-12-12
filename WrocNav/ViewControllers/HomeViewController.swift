@@ -71,7 +71,7 @@ class HomeViewController: WNViewController {
     
     @objc func search(sender: SearchBox) {
         sender.isEnabled = false
-        
+        performSegue(withIdentifier: "seachSegue", sender: nil)
         sender.isEnabled = true
     }
     
