@@ -13,8 +13,8 @@ import Mapbox
 
 class HomeViewController: WNViewController {
     @IBOutlet weak var mapView: MGLMapView!
+    var searchBox: SearchBox!
     
-    private var searchController: UISearchController!
     private let locationManager: CLLocationManager = CLLocationManager()
     private let dataService: DataService = DataService.shared
     private let disposeBag: DisposeBag = DisposeBag()
@@ -22,10 +22,15 @@ class HomeViewController: WNViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        setUpSearchBox()
         locationManager.delegate = self
         
+        let defaultCoordinates = CLLocationCoordinate2D(latitude: 51.111983, longitude: 17.061557)
+        mapView.setCenter(defaultCoordinates, zoomLevel: 10.0, animated: false)
         mapView.userTrackingMode = .followWithHeading
         mapView.showsUserLocation = true
+        mapView.compassView.isHidden = true
+        mapView.allowsRotating = false
         mapView.zoomLevel = 13.5
         mapView.styleURL = MGLStyle.lightStyleURL
         mapView.delegate = self
@@ -44,6 +49,17 @@ class HomeViewController: WNViewController {
         navBar.tintColor = UIColor.black
         navBar.shadowImage = UIImage()
     }
+    
+    func setUpSearchBox() {
+        searchBox = SearchBox()
+        searchBox.addTarget(self, action: #selector(search(sender:)), for: .touchUpInside)
+        searchBox.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(searchBox)
+        let top = searchBox.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12.0)
+        let leading = searchBox.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8.0)
+        let trailing = searchBox.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8.0)
+        NSLayoutConstraint.activate([top, leading, trailing])
+    }
 
     // MARK: User Actions
     
@@ -51,6 +67,12 @@ class HomeViewController: WNViewController {
         if let userCoordinates = mapView.userLocation?.coordinate {
             mapView.setCenter(userCoordinates, zoomLevel: 13.5, animated: true)
         }
+    }
+    
+    @objc func search(sender: SearchBox) {
+        sender.isEnabled = false
+        
+        sender.isEnabled = true
     }
     
     // Data bindings
