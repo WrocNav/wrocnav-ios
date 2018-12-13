@@ -22,6 +22,8 @@ class SearchViewController: UIViewController {
     private var searchEngine: SearchEngine<Station>?
     private let dataService: DataService = DataService.shared
     private let disposeBag: DisposeBag = DisposeBag()
+    var sourceLocation: Location?
+    var destinationLocation: Location?
     
     @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
@@ -32,8 +34,10 @@ class SearchViewController: UIViewController {
         setUpTableView()
         
         sourceTextField.delegate = self
+        sourceTextField.text = sourceLocation?.name
         sourceTextField.addTarget(self, action: #selector(updateSearchResults(_:)), for: .editingChanged)
         destinationTextField.delegate = self
+        destinationTextField.text = destinationLocation?.name
         destinationTextField.addTarget(self, action: #selector(updateSearchResults(_:)), for: .editingChanged)
         
         let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
@@ -71,6 +75,19 @@ class SearchViewController: UIViewController {
         return label
     }
     
+    func updateTextFields() {
+        sourceTextField.text = sourceLocation?.name
+        destinationTextField.text = destinationLocation?.name
+    }
+    
+    var isSourceBeingEdited: Bool {
+        return sourceTextField.isFirstResponder
+    }
+    
+    var isDestinationBeingEdited: Bool {
+        return destinationTextField.isFirstResponder
+    }
+    
     // MARK: Actions
 
     @IBAction func swapEndpoints(_ sender: Any) {
@@ -86,7 +103,7 @@ class SearchViewController: UIViewController {
             if currentText.isEmpty {
                 stations = searchEngine.allValues
             } else {
-                stations = searchEngine.searchWith(prefix: currentText)
+                stations = searchEngine.searchWith(prefix: currentText.lowercased())
             }
         }
     }
@@ -142,6 +159,13 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == kSearchLocationSection {
+            
+        } else if indexPath.section == kSearchResultsSection {
+            let station = stations[indexPath.row]
+            //TODO update text field
+        }
+        updateTextFields()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -155,6 +179,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == kSearchResultsSection {
             let parentView = UIView()
+            parentView.backgroundColor = tableView.backgroundColor
             let label = sectionHeaderLabel()
             parentView.addSubview(label)
             label.text = self.tableView(tableView, titleForHeaderInSection: section)

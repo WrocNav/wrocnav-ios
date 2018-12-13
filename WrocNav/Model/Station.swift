@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-struct Station {
+struct Station: Location {
     enum Category {
         case bus
         case tram
