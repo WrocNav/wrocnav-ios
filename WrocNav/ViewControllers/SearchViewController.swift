@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import RxSwift
 
 fileprivate let kSearchLocationSection = 0
 fileprivate let kSearchResultsSection = 1
 
 class SearchViewController: UIViewController {
+    
+    private var stations: [Station] = [] {
+        didSet {
+            resultTableView.reloadData()
+        }
+    }
+    private var searchEngine: SearchEngine<Station>?
+    private let dataService: DataService = DataService.shared
+    private let disposeBag: DisposeBag = DisposeBag()
     
     @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
@@ -20,6 +30,25 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        
+        sourceTextField.delegate = self
+        sourceTextField.addTarget(self, action: #selector(updateSearchResults(_:)), for: .editingChanged)
+        destinationTextField.delegate = self
+        destinationTextField.addTarget(self, action: #selector(updateSearchResults(_:)), for: .editingChanged)
+        
+        let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
+        dismissGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(dismissGesture)
+        
+        dataService.fetchStations().subscribe(onNext: { (station) in
+            self.stations.append(station)
+        }, onCompleted: {
+            var lookupTable: [String: Station] = [:]
+            for station in self.stations {
+                lookupTable[station.name.lowercased()] = station
+            }
+            self.searchEngine = SearchEngine(lookupTable: lookupTable)
+        }).disposed(by: disposeBag)
     }
     
     // MARK: UI setup
@@ -48,6 +77,28 @@ class SearchViewController: UIViewController {
         
     }
     
+    @objc func dismissKeyboard(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
+    @objc func updateSearchResults(_ sender: UITextField) {
+        if let currentText = sender.text, let searchEngine = searchEngine {
+            if currentText.isEmpty {
+                stations = searchEngine.allValues
+            } else {
+                stations = searchEngine.searchWith(prefix: currentText)
+            }
+        }
+    }
+    
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        stations = searchEngine?.allValues ?? []
+    }
+    
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -60,7 +111,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if section == kSearchLocationSection {
             return 1
         } else {
-            return 2
+            return stations.count
         }
     }
     
@@ -71,9 +122,19 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             cell.nameLabel.text = "Your location"
             cell.descriptionLabel.text = "Wrocław"
         } else {
-            cell.iconImageView.image = UIImage(named: "bus")
-            cell.nameLabel.text = "Przystanek 1"
-            cell.descriptionLabel.text = "Station - Lines: 1, 2, 3"
+            let station = stations[indexPath.row]
+            var image: UIImage!
+            switch station.category {
+            case .bus:
+                image = UIImage(named: "bus")
+            case .tram:
+                image = UIImage(named: "tram")
+            case .common:
+                image = UIImage(named: "busAndTram")
+            }
+            cell.iconImageView.image = image
+            cell.nameLabel.text = station.name
+            cell.descriptionLabel.text = "Station"
         }
         
         return cell

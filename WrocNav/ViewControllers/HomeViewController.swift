@@ -25,7 +25,7 @@ class HomeViewController: WNViewController {
         setUpSearchBox()
         title = ""
         locationManager.delegate = self
-        
+
         let defaultCoordinates = CLLocationCoordinate2D(latitude: 51.111983, longitude: 17.061557)
         mapView.setCenter(defaultCoordinates, zoomLevel: 10.0, animated: false)
         mapView.userTrackingMode = .followWithHeading
@@ -108,7 +108,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             // add button for location
-            let locateButton = UIBarButtonItem(title: "Locate", style: .plain, target: self, action: #selector(locate(sender:)))
+            let locateButton = UIBarButtonItem(image: UIImage(named: "location_bar"), style: .plain, target: self, action: #selector(locate(sender:)))
             navigationItem.rightBarButtonItem = locateButton
         }
     }

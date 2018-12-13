@@ -99,7 +99,9 @@ class PrefixTree<T: Hashable> {
         }
         
         var result: [[T]] = []
-        lookupRecursive(current, prefix: prefix, result: &result)
+        for (_, child) in current!.children {
+            lookupRecursive(child, prefix: prefix, result: &result)
+        }
         
         return result
     }
@@ -109,13 +111,13 @@ class PrefixTree<T: Hashable> {
             return
         }
         
+        var prefix = prefix
+        prefix.append(node.value!)
         if node.isTerminating {
             result.append(prefix)
         }
     
         for (_, child) in node.children {
-            var prefix = prefix
-            prefix.append(node.value!)
             lookupRecursive(child, prefix: prefix, result: &result)
         }
     }
