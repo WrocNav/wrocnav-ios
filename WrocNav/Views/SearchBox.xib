@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBox" customModule="WrocNav" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="SZW-jk-xtK"/>
+                <outlet property="searchFieldView" destination="SZ0-kC-Psu" id="Auc-um-NXo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZ0-kC-Psu" customClass="RoundView" customModule="WrocNav" customModuleProvider="target">
+                    <rect key="frame" x="6" y="4" width="363" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are we goin?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltv-7d-IDz">
+                            <rect key="frame" x="20" y="14.5" width="287" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                            <color key="textColor" white="0.0" alpha="0.89969499143835618" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-uT-gtt">
+                            <rect key="frame" x="323" y="16" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="oMZ-uT-gtt" secondAttribute="height" multiplier="1:1" id="3yK-qo-1hB"/>
+                                <constraint firstAttribute="width" constant="20" id="Ds9-hX-rtH"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="oMZ-uT-gtt" firstAttribute="centerY" secondItem="SZ0-kC-Psu" secondAttribute="centerY" id="JKn-i2-yGR"/>
+                        <constraint firstItem="Ltv-7d-IDz" firstAttribute="centerY" secondItem="SZ0-kC-Psu" secondAttribute="centerY" id="Xpz-0t-J98"/>
+                        <constraint firstItem="Ltv-7d-IDz" firstAttribute="leading" secondItem="SZ0-kC-Psu" secondAttribute="leading" constant="20" id="c6O-9L-z5G"/>
+                        <constraint firstItem="oMZ-uT-gtt" firstAttribute="leading" secondItem="Ltv-7d-IDz" secondAttribute="trailing" constant="16" id="yAZ-m0-LLT"/>
+                        <constraint firstAttribute="trailing" secondItem="oMZ-uT-gtt" secondAttribute="trailing" constant="20" id="zkM-uM-Mxd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.20000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SZ0-kC-Psu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="0mc-gu-OXO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SZ0-kC-Psu" secondAttribute="trailing" constant="6" id="9OL-qQ-03A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SZ0-kC-Psu" secondAttribute="bottom" constant="4" id="Psi-qp-RuH"/>
+                <constraint firstItem="SZ0-kC-Psu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="6" id="ZIE-l4-eyM"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="116" y="-195.20239880059972"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="20" height="20"/>
+    </resources>
+</document>
