@@ -20,8 +20,6 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
-
-        // Do any additional setup after loading the view.
     }
     
     // MARK: UI setup
@@ -43,13 +41,13 @@ class SearchViewController: UIViewController {
         
         return label
     }
+    
+    // MARK: Actions
 
     @IBAction func swapEndpoints(_ sender: Any) {
         
     }
     
-    
-
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {

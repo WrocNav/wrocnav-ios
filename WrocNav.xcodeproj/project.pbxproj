@@ -19,6 +19,8 @@
 		E27F3BA121C0AFAB00C3AB94 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F3BA021C0AFAB00C3AB94 /* RoundTextField.swift */; };
 		E27F3BA721C1B0A300C3AB94 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F3BA521C1B0A300C3AB94 /* StationTableViewCell.swift */; };
 		E27F3BA821C1B0A300C3AB94 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F3BA621C1B0A300C3AB94 /* StationTableViewCell.xib */; };
+		E27F3BAA21C1CAB200C3AB94 /* PrefixTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F3BA921C1CAB200C3AB94 /* PrefixTree.swift */; };
+		E27F3BAC21C1D74C00C3AB94 /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F3BAB21C1D74C00C3AB94 /* SearchEngine.swift */; };
 		E2A21FF521C094C600F95286 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A21FF421C094C600F95286 /* SearchViewController.swift */; };
 		E2A21FF721C097B600F95286 /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A21FF621C097B600F95286 /* SearchBox.swift */; };
 		E2A21FF921C097C300F95286 /* SearchBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A21FF821C097C300F95286 /* SearchBox.xib */; };
@@ -57,6 +59,8 @@
 		E27F3BA021C0AFAB00C3AB94 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		E27F3BA521C1B0A300C3AB94 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		E27F3BA621C1B0A300C3AB94 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
+		E27F3BA921C1CAB200C3AB94 /* PrefixTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixTree.swift; sourceTree = "<group>"; };
+		E27F3BAB21C1D74C00C3AB94 /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
 		E2A21FF421C094C600F95286 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E2A21FF621C097B600F95286 /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		E2A21FF821C097C300F95286 /* SearchBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBox.xib; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 			children = (
 				E2F4FCA421AE248B005B34F1 /* Station.swift */,
 				E2F4FD2921B85B69005B34F1 /* TimeTable.swift */,
+				E27F3BA921C1CAB200C3AB94 /* PrefixTree.swift */,
+				E27F3BAB21C1D74C00C3AB94 /* SearchEngine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */,
 				E2F4FD3221B8744B005B34F1 /* RoundView.swift in Sources */,
 				E2F4FD2221B828DE005B34F1 /* ConnectionManager.swift in Sources */,
+				E27F3BAC21C1D74C00C3AB94 /* SearchEngine.swift in Sources */,
 				E2F4FCD221AEE2DB005B34F1 /* WNViewController.swift in Sources */,
 				E27F3BA121C0AFAB00C3AB94 /* RoundTextField.swift in Sources */,
 				E2F4FD2821B85AB4005B34F1 /* DataService.swift in Sources */,
@@ -364,6 +371,7 @@
 				E2F4FD3421B8744B005B34F1 /* GradientRoundButton.swift in Sources */,
 				E2F4FCA521AE248B005B34F1 /* Station.swift in Sources */,
 				E2F4FD2A21B85B69005B34F1 /* TimeTable.swift in Sources */,
+				E27F3BAA21C1CAB200C3AB94 /* PrefixTree.swift in Sources */,
 				E2F4FCD021AEDCD5005B34F1 /* MainNavigationController.swift in Sources */,
 				E2F4FCE021AEF8B3005B34F1 /* Foundation+Extensions.swift in Sources */,
 				E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */,
