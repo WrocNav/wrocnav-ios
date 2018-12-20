@@ -28,3 +28,9 @@ extension Station {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
+
+extension Station: Model {
+    static var documentType: String {
+        return "station"
+    }
+}

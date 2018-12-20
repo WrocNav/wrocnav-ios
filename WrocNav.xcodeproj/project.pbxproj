@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E20E466D21CB2AA6001755C9 /* CouchbaseLiteSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20E466C21CB2AA6001755C9 /* CouchbaseLiteSwift.framework */; };
+		E20E466F21CB2B1F001755C9 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E466E21CB2B1F001755C9 /* PersistenceService.swift */; };
+		E20E467121CB2F3E001755C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E467021CB2F3E001755C9 /* Model.swift */; };
 		E240CBE621A59C1F00A136BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240CBE521A59C1F00A136BF /* AppDelegate.swift */; };
 		E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240CBE721A59C1F00A136BF /* HomeViewController.swift */; };
 		E240CBEB21A59C1F00A136BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E240CBE921A59C1F00A136BF /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		E20E466C21CB2AA6001755C9 /* CouchbaseLiteSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLiteSwift.framework; path = Carthage/Build/iOS/CouchbaseLiteSwift.framework; sourceTree = "<group>"; };
+		E20E466E21CB2B1F001755C9 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		E20E467021CB2F3E001755C9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E240CBE221A59C1F00A136BF /* WrocNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrocNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E240CBE521A59C1F00A136BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E240CBE721A59C1F00A136BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				E2F4FD2321B82A68005B34F1 /* Routes */,
 				E2F4FD2121B828DE005B34F1 /* ConnectionManager.swift */,
 				E2F4FD2721B85AB4005B34F1 /* DataService.swift */,
+				E20E466E21CB2B1F001755C9 /* PersistenceService.swift */,
+				E20E467021CB2F3E001755C9 /* Model.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -359,11 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20E467121CB2F3E001755C9 /* Model.swift in Sources */,
 				E2F4FCD921AEF5C4005B34F1 /* MenuItem.swift in Sources */,
 				E2A21FF721C097B600F95286 /* SearchBox.swift in Sources */,
 				E2F4FCDB21AEF81B005B34F1 /* Theme.swift in Sources */,
 				E2F4FD3121B8744B005B34F1 /* RoundButton.swift in Sources */,
 				E2F4FD3321B8744B005B34F1 /* GradientRoundView.swift in Sources */,
+				E20E466F21CB2B1F001755C9 /* PersistenceService.swift in Sources */,
 				E2A21FF521C094C600F95286 /* SearchViewController.swift in Sources */,
 				E240CBE821A59C1F00A136BF /* HomeViewController.swift in Sources */,
 				E27F3BAE21C1FF5200C3AB94 /* Location.swift in Sources */,
