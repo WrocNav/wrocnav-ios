@@ -1,4 +1,5 @@
-binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "4.6.0"
+binary "https://packages.couchbase.com/releases/couchbase-lite-ios/carthage/CouchbaseLite-Community.json" "2.1.3"
+binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "4.7.0"
 github "Alamofire/Alamofire" "4.8.0"
 github "ReactiveX/RxSwift" "4.4.0"
 github "SwiftyBeaver/SwiftyBeaver" "1.6.1"

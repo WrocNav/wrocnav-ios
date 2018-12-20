@@ -4,3 +4,4 @@ github "ReactiveX/RxSwift" ~> 4.0
 github "SwiftyBeaver/SwiftyBeaver" ~> 1.6
 github "jonkykong/SideMenu" ~>5.0.3
 github "fredyshox/KMNavigationBarTransition" "master"
+binary "https://packages.couchbase.com/releases/couchbase-lite-ios/carthage/CouchbaseLite-Community.json" ~> 2.1.3
